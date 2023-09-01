@@ -13,9 +13,10 @@
     margin-bottom: 20px;
 }
 
-.esp-container .esp-text-div .span {
+.esp-container .esp-text-div .esp-text-span {
     margin: auto;
     display: table;
+    color: white;
 }
 
 .esp-columns,
@@ -47,6 +48,7 @@
     float: left;
     width: 4.1%;
     height: 25%;
+    color: white;
 }
 
 .time-s {
@@ -66,10 +68,14 @@
 }
 
 .gray {
-    background-color: silver;
+    background-color: gray;
 }
 
 .shedding {
+    background-color: #FFAA33;
+}
+
+.upcoming {
     background-color: orangered;
 }
 
