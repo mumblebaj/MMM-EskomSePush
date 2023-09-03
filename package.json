@@ -1,6 +1,6 @@
 {
   "name": "mmm-eskomsepush",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eskom Loadshedding schedule data",
   "main": "MMM-EskomSePush.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "luxon": "^3.4.2",
     "node-fetch": "^2.6.1"
   }
 }

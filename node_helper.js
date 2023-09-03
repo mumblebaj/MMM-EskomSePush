@@ -2,7 +2,9 @@ var NodeHelper = require('node_helper')
     var fetch = require('node-fetch')
     var fs = require('fs')
     var os = require('os')
-    var { DateTime } = require('luxon')
+    var {
+    DateTime
+} = require('luxon')
 
     var datalog = `${__dirname}/data.log`;
 
