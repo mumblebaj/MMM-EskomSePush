@@ -89,7 +89,6 @@ Module.register("MMM-EskomSePush", {
             if (typeof delay != "undefined" && delay >= 0) {
                 nextLoad = delay
             }
-
             var self = this
             setInterval(function () {
                 self.getESPData()
@@ -97,24 +96,18 @@ Module.register("MMM-EskomSePush", {
     },
 
     resetTimeElements: function () {
-        Log.log("Resetting Time Elements")
         let wrapper = document.getElementById("esp-wrapper")
             const elements = document.querySelectorAll('.time')
-            //Log.log("Time elements selected: ", elements)
             elements.forEach(element => {
-                Log.log("Resetting this time element: ", element)
                 element.classList.add('hide')
                 element.classList.remove('show')
             })
     },
 
     resetColumnElements: function () {
-        Log.log("Resetting Column Elements")
         let wrapper = document.getElementById("esp-wrapper")
             const elements = document.querySelectorAll('.column')
-            //Log.log("Column Elements Selected: ", elements)
             elements.forEach(element => {
-                Log.log("Resetting this column element: ", element)
                 element.classList.add('gray')
                 element.classList.remove('upcoming', 'shedding')
             })
