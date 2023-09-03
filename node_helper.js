@@ -44,10 +44,10 @@ module.exports = NodeHelper.create({
                 "region": payload.info.region,
                 "events": eventsData
             })
-            fs.appendFile(datalog, JSON.stringify(espEvents, null, 2) + os.EOL, function (err) {
-                if (err)
-                    throw err;
-            })
+            // fs.appendFile(datalog, JSON.stringify(espEvents, null, 2) + os.EOL, function (err) {
+            //     if (err)
+            //         throw err;
+            // })
             this.sendSocketNotification("ESP_DATA", espEvents)
         }
     },
