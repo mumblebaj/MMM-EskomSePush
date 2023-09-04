@@ -1,5 +1,5 @@
 .esp-container {
-    width: 50vw;
+    width: 100%;
     height: 20vh;
     transform: translate(50%, 50%);
     -webkit-transform: translate(50%, 50%);
@@ -9,7 +9,7 @@
 }
 
 .esp-text-div {
-    width: 50vw;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -22,7 +22,7 @@
 .esp-columns,
 .esp-times {
     height: 50px;
-    width: 50vw;
+    width: 100%;
 }
 
 .esp-columns:after,
@@ -54,7 +54,7 @@
 .time-s {
     float: left;
     width: 1.85%;
-    height: 50%;
+    height: 100%;
 }
 
 .col0000 {
