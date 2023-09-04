@@ -1,11 +1,11 @@
 .esp-container {
     width: 100%;
     height: 20vh;
-    transform: translate(50%, 50%);
-    -webkit-transform: translate(50%, 50%);
-    -moz-transform: translate(50%, 50%);
-    -ms-transform: translate(50%, 50%);
-    -o-transform: translate(50%, 50%);
+    transform: translate(5%, 50%);
+    -webkit-transform: translate(5%, 50%);
+    -moz-transform: translate(5%, 50%);
+    -ms-transform: translate(5%, 50%);
+    -o-transform: translate(5%, 50%);
 }
 
 .esp-text-div {
