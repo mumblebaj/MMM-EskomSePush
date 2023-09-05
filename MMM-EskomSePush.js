@@ -561,7 +561,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "0:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol24');
-                    if (hours >= 0 || hours <= 4) {
+                    if (hours >= 0 && hours <= 4) {
                         this.updateShedding('col0000');
                         this.updateShedding('col0030');
                         this.updateShedding('col0100');
@@ -589,7 +589,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "2:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol02');
-                    if (hours >= 2 || hours <= 6) {
+                    if (hours >= 2 && hours <= 6) {
                         this.updateShedding('col0200');
                         this.updateShedding('col0230');
                         this.updateShedding('col0300');
@@ -618,7 +618,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "4:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol04');
-                    if (hours >= 4 || hours <= 8) {
+                    if (hours >= 4 && hours <= 8) {
                         this.updateShedding('col0400');
                         this.updateShedding('col0430');
                         this.updateShedding('col0500');
@@ -647,7 +647,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "6:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol06');
-                    if (hours >= 6 || hours <= 10) {
+                    if (hours >= 6 && hours <= 10) {
                         this.updateShedding('col0600');
                         this.updateShedding('col0630');
                         this.updateShedding('col0700');
@@ -676,7 +676,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "8:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol08');
-                    if (hours >= 8 || hours <= 12) {
+                    if (hours >= 8 && hours <= 12) {
 						this.updateShedding('col0800');
                         this.updateShedding('col0830');
                         this.updateShedding('col0900');
@@ -705,7 +705,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "10:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol10');
-                    if (hours >= 10 || hours <= 14) {
+                    if (hours >= 10 && hours <= 14) {
                         this.updateShedding('col1000');
                         this.updateShedding('col1030');
                         this.updateShedding('col1100');
@@ -734,7 +734,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "12:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol12');
-                    if (hours >= 12 || hours <= 16) {
+                    if (hours >= 12 && hours <= 16) {
                         this.updateShedding('col1200');
                         this.updateShedding('col1230');
                         this.updateShedding('col1300');
@@ -763,7 +763,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "14:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol14');
-                    if (hours >= 14 || hours <= 18) {
+                    if (hours >= 14 && hours <= 18) {
                         this.updateShedding('col1400');
                         this.updateShedding('col1430');
                         this.updateShedding('col1500');
@@ -792,7 +792,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "16:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol16');
-                    if (hours >= 16 || hours <= 20) {
+                    if (hours >= 16 && hours <= 20) {
                         this.updateShedding('col1600');
                         this.updateShedding('col1630');
                         this.updateShedding('col1700');
@@ -821,7 +821,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "18:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol18');
-                    if (hours >= 18 || hours <= 22) {
+                    if (hours >= 18 && hours <= 22) {
                         this.updateShedding('col1800');
                         this.updateShedding('col1830');
                         this.updateShedding('col1900');
@@ -850,7 +850,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "20:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol20');
-                    if (hours >= 20 || hours <= 0) {
+                    if (hours >= 20 && hours <= 0) {
                         this.updateShedding('col2000');
                         this.updateShedding('col2030');
                         this.updateShedding('col2100');
@@ -879,7 +879,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "22:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol22');
-                    if (hours >= 22 || hours <= 2) {
+                    if (hours >= 22 && hours <= 2) {
                         this.updateShedding('col2200');
                         this.updateShedding('col2230');
                         this.updateShedding('col2300');
@@ -908,7 +908,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "0:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol24');
-                    if (hours >= 0 || hours <= 4) {
+                    if (hours >= 0 && hours <= 4) {
                         this.updateShedding('col0000');
                         this.updateShedding('col0030');
                         this.updateShedding('col0100');
@@ -937,7 +937,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "2:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol02');
-                    if (hours >= 2 || hours <= 6) {
+                    if (hours >= 2 && hours <= 6) {
                         this.updateShedding('col0200`');
                         this.updateShedding('col0230');
                         this.updateShedding('col0300');
@@ -966,7 +966,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "4:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol04');
-                    if (hours >= 4 || hours <= 8) {
+                    if (hours >= 4 && hours <= 8) {
                         this.updateShedding('col0400');
                         this.updateShedding('col0430');
                         this.updateShedding('col0500');
@@ -995,7 +995,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "6:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol06');
-                    if (hours >= 6 || hours == 10) {
+                    if (hours >= 6 && hours == 10) {
                         this.updateShedding('col0600');
                         this.updateShedding('col0630');
                         this.updateShedding('col0700');
@@ -1024,7 +1024,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "8:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol08');
-                    if (hours >= 8 || hours <= 12) {
+                    if (hours >= 8 && hours <= 12) {
                         this.updateShedding('col0800');
                         this.updateShedding('col0830');
                         this.updateShedding('col0900');
@@ -1053,7 +1053,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "10:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol10');
-                    if (hours >= 10 || hours <= 14) {
+                    if (hours >= 10 && hours <= 14) {
                         this.updateShedding('col1000');
                         this.updateShedding('col1030');
                         this.updateShedding('col1100');
@@ -1082,7 +1082,7 @@ Module.register("MMM-EskomSePush", {
                     event.startTime === "12:0" &&
                     event.duration == 4.5) {
                     this.updateShow('tcol12');
-                    if (hours >= 12 || hours <= 16) {
+                    if (hours >= 12 && hours <= 16) {
                         this.updateShedding('col1200');
                         this.updateShedding('col1230');
                         this.updateShedding('col1300');
