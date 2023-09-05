@@ -4,7 +4,13 @@ A [MagicMirror²](https://magicmirror.builders) module to display South African 
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
 
+## 2.5hr Stint
+
 ![Example](images/image-1.png)
+
+## 4.5hr Stint
+
+![Example](images/image-2.png)
 
 ## Dependencies
 - Requires MagicMirror² v2.23.0
