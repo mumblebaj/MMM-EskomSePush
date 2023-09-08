@@ -96,10 +96,8 @@ Module.register("MMM-EskomSePush", {
     },
 
     resetTimeElements: function () {
-        Log.log("Resetting Time Elements")
         let wrapper = document.getElementById("esp-wrapper")
         const elements = document.querySelectorAll('.time')
-        //Log.log("Time elements selected: ", elements)
         elements.forEach(element => {
             element.classList.add('hide')
             element.classList.remove('show')
@@ -107,10 +105,8 @@ Module.register("MMM-EskomSePush", {
     },
 
     resetColumnElements: function () {
-        Log.log("Resetting Column Elements")
         let wrapper = document.getElementById("esp-wrapper")
         const elements = document.querySelectorAll('.column')
-        //Log.log("Column Elements Selected: ", elements)
         elements.forEach(element => {
             element.classList.add('gray')
             element.classList.remove('upcoming', 'shedding')
