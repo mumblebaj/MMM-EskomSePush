@@ -419,7 +419,7 @@ Module.register("MMM-EskomSePush", {
                 event.startTime === "2:0" &&
                 event.duration == 2.5) {
                 this.updateShow('tcol02');
-                this.updateColor('col0200`');
+                this.updateColor('col0200');
                 this.updateColor('col0230');
                 this.updateColor('col0300');
                 this.updateColor('col0330');
@@ -841,7 +841,7 @@ Module.register("MMM-EskomSePush", {
                 event.startTime === "2:0" &&
                 event.duration == 4.5) {
                 this.updateShow('tcol02');
-                this.updateColor('col0200`');
+                this.updateColor('col0200');
                 this.updateColor('col0230');
                 this.updateColor('col0300');
                 this.updateColor('col0330');
