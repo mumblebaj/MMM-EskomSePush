@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/mumblebaj/MMM-EskomSePush.git"
   },
-  "author": "",
+  "author": "mumblebaj",
   "license": "ISC",
   "dependencies": {
     "luxon": "^3.4.2",
