@@ -161,14 +161,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0100');
                     this.updateShedding('col0130');
                     this.updateShedding('col0200');
-                    this.updateShedding('col0230');
                 } else {
                     this.updateColor('col0000');
                     this.updateColor('col0030');
                     this.updateColor('col0100');
                     this.updateColor('col0130');
                     this.updateColor('col0200');
-                    this.updateColor('col0230');
                 }
             }
             if (
@@ -182,14 +180,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0300');
                     this.updateShedding('col0330');
                     this.updateShedding('col0400');
-                    this.updateShedding('col0430');
                 } else {
                     this.updateColor('col0200');
                     this.updateColor('col0230');
                     this.updateColor('col0300');
                     this.updateColor('col0330');
                     this.updateColor('col0400');
-                    this.updateColor('col0430');
                 }
             }
             if (
@@ -203,14 +199,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0500');
                     this.updateShedding('col0530');
                     this.updateShedding('col0600');
-                    this.updateShedding('col0630');
                 } else {
                     this.updateColor('col0400');
                     this.updateColor('col0430');
                     this.updateColor('col0500');
                     this.updateColor('col0530');
                     this.updateColor('col0600');
-                    this.updateColor('col0630');
                 }
             }
             if (
@@ -224,14 +218,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0700');
                     this.updateShedding('col0730');
                     this.updateShedding('col0800');
-                    this.updateShedding('col0830');
                 } else {
                     this.updateColor('col0600');
                     this.updateColor('col0630');
                     this.updateColor('col0700');
                     this.updateColor('col0730');
                     this.updateColor('col0800');
-                    this.updateColor('col0830');
                 }
             }
             if (
@@ -245,14 +237,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0900');
                     this.updateShedding('col0930');
                     this.updateShedding('col1000');
-                    this.updateShedding('col1030');
                 } else {
                     this.updateColor('col0800');
                     this.updateColor('col0830');
                     this.updateColor('col0900');
                     this.updateColor('col0930');
                     this.updateColor('col1000');
-                    this.updateShedding('col1030');
                 }
             }
             if (
@@ -266,14 +256,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1100');
                     this.updateShedding('col1130');
                     this.updateShedding('col1200');
-                    this.updateShedding('col1230');
                 } else {
                     this.updateColor('col1000');
                     this.updateColor('col1030');
                     this.updateColor('col1100');
                     this.updateColor('col1130');
                     this.updateColor('col1200');
-                    this.updateColor('col1230');
                 }
             }
             if (
@@ -287,14 +275,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1300');
                     this.updateShedding('col1330');
                     this.updateShedding('col1400');
-                    this.updateShedding('col1430');
                 } else {
                     this.updateColor('col1200');
                     this.updateColor('col1230');
                     this.updateColor('col1300');
                     this.updateColor('col1330');
                     this.updateColor('col1400');
-                    this.updateColor('col1430');
                 }
             }
             if (
@@ -308,14 +294,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1500');
                     this.updateShedding('col1530');
                     this.updateShedding('col1600');
-                    this.updateShedding('col1630');
                 } else {
                     this.updateColor('col1400');
                     this.updateColor('col1430');
                     this.updateColor('col1500');
                     this.updateColor('col1530');
                     this.updateColor('col1600');
-                    this.updateColor('col1630');
                 }
             }
             if (
@@ -329,14 +313,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1700');
                     this.updateShedding('col1730');
                     this.updateShedding('col1800');
-                    this.updateShedding('col1830');
                 } else {
                     this.updateColor('col1600');
                     this.updateColor('col1630');
                     this.updateColor('col1700');
                     this.updateColor('col1730');
                     this.updateColor('col1800');
-                    this.updateColor('col1830');
                 }
             }
             if (
@@ -350,14 +332,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1900');
                     this.updateShedding('col1930');
                     this.updateShedding('col2000');
-                    this.updateShedding('col2030');
                 } else {
                     this.updateColor('col1800');
                     this.updateColor('col1830');
                     this.updateColor('col1900');
                     this.updateColor('col1930');
                     this.updateColor('col2000');
-                    this.updateColor('col2030');
                 }
             }
             if (
@@ -371,14 +351,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col2100');
                     this.updateShedding('col2130');
                     this.updateShedding('col2200');
-                    this.updateShedding('col2230');
                 } else {
                     this.updateColor('col2000');
                     this.updateColor('col2030');
                     this.updateColor('col2100');
                     this.updateColor('col2130');
                     this.updateColor('col2200');
-                    this.updateColor('col2230');
                 }
             }
             if (
@@ -392,14 +370,12 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col2300');
                     this.updateShedding('col2330');
                     this.updateShedding('col0000');
-                    this.updateShedding('col0030');
                 } else {
                     this.updateColor('col2200');
                     this.updateColor('col2230');
                     this.updateColor('col2300');
                     this.updateColor('col2330');
                     this.updateColor('col0000');
-                    this.updateColor('col0030');
                 }
             }
             if (
@@ -412,7 +388,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0100');
                 this.updateColor('col0130');
                 this.updateColor('col0200');
-                this.updateColor('col0230');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -424,7 +399,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0300');
                 this.updateColor('col0330');
                 this.updateColor('col0400');
-                this.updateColor('col0430');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -436,7 +410,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0500');
                 this.updateColor('col0530');
                 this.updateColor('col0600');
-                this.updateColor('col0630');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -448,7 +421,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0700');
                 this.updateColor('col0730');
                 this.updateColor('col0800');
-                this.updateColor('col0830');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -460,7 +432,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0900');
                 this.updateColor('col0930');
                 this.updateColor('col1000');
-                this.updateColor('col1030');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -472,7 +443,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col1100');
                 this.updateColor('col1130');
                 this.updateColor('col1200');
-                this.updateColor('col1230');
             }
             if (event.relDate === "today" &&
                 event.startTime === "0:0" &&
@@ -487,7 +457,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0230');
                     this.updateShedding('col0300');
                     this.updateShedding('col0400');
-                    this.updateShedding('col0430');
                 } else {
                     this.updateColor('col0000');
                     this.updateColor('col0030');
@@ -498,7 +467,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col0300');
                     this.updateColor('col0330');
                     this.updateColor('col0400');
-                    this.updateColor('col0430');
                 }
             }
             if (
@@ -516,7 +484,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0500');
                     this.updateShedding('col0530');
                     this.updateShedding('col0600');
-                    this.updateShedding('col0630');
                 } else {
                     this.updateColor('col0200');
                     this.updateColor('col0230');
@@ -527,7 +494,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col0500');
                     this.updateColor('col0530');
                     this.updateColor('col0600');
-                    this.updateColor('col0630');
                 }
             }
             if (
@@ -545,7 +511,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0700');
                     this.updateShedding('col0730');
                     this.updateShedding('col0800');
-                    this.updateShedding('col0830');
                 } else {
                     this.updateColor('col0400');
                     this.updateColor('col0430');
@@ -556,7 +521,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col0700');
                     this.updateColor('col0730');
                     this.updateColor('col0800');
-                    this.updateColor('col0830');
                 }
             }
             if (
@@ -574,7 +538,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0900');
                     this.updateShedding('col0930');
                     this.updateShedding('col1000');
-                    this.updateShedding('col1030');
                 } else {
                     this.updateColor('col0600');
                     this.updateColor('col0630');
@@ -585,7 +548,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col0900');
                     this.updateColor('col0930');
                     this.updateColor('col1000');
-                    this.updateColor('col1030');
                 }
             }
             if (
@@ -603,7 +565,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1100');
                     this.updateShedding('col1130');
                     this.updateShedding('col1200');
-                    this.updateShedding('col1230');
                 } else {
                     this.updateColor('col0800');
                     this.updateColor('col0830');
@@ -614,7 +575,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col1100');
                     this.updateColor('col1130');
                     this.updateColor('col1200');
-                    this.updateColor('col1230');
                 }
             }
             if (
@@ -632,7 +592,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1300');
                     this.updateShedding('col1330');
                     this.updateShedding('col1400');
-                    this.updateShedding('col1430');
                 } else {
                     this.updateColor('col1000');
                     this.updateColor('col1030');
@@ -643,7 +602,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col1300');
                     this.updateColor('col1330');
                     this.updateColor('col1400');
-                    this.updateColor('col1430');
                 }
             }
             if (
@@ -661,7 +619,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1500');
                     this.updateShedding('col1530');
                     this.updateShedding('col1600');
-                    this.updateShedding('col1630');
                 } else {
                     this.updateColor('col1200');
                     this.updateColor('col1230');
@@ -672,7 +629,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col1500');
                     this.updateColor('col1530');
                     this.updateColor('col1600');
-                    this.updateColor('col1630');
                 }
             }
             if (
@@ -690,7 +646,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1700');
                     this.updateShedding('col1730');
                     this.updateShedding('col1800');
-                    this.updateShedding('col1830');
                 } else {
                     this.updateColor('col1400');
                     this.updateColor('col1430');
@@ -701,7 +656,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col1700');
                     this.updateColor('col1730');
                     this.updateColor('col1800');
-                    this.updateColor('col1830');
                 }
             }
             if (
@@ -719,7 +673,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col1900');
                     this.updateShedding('col1930');
                     this.updateShedding('col2000');
-                    this.updateShedding('col2030');
                 } else {
                     this.updateColor('col1600');
                     this.updateColor('col1630');
@@ -730,7 +683,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col1900');
                     this.updateColor('col1930');
                     this.updateColor('col2000');
-                    this.updateColor('col2030');
                 }
             }
             if (
@@ -748,7 +700,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col2100');
                     this.updateShedding('col2130');
                     this.updateShedding('col2200');
-                    this.updateShedding('col2230');
                 } else {
                     this.updateColor('col1800');
                     this.updateColor('col1830');
@@ -759,7 +710,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col2100');
                     this.updateColor('col2130');
                     this.updateColor('col2200');
-                    this.updateColor('col2230');
                 }
             }
             if (
@@ -777,7 +727,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col2300');
                     this.updateShedding('col2330');
                     this.updateShedding('col0000');
-                    this.updateShedding('col0030');
                 } else {
                     this.updateColor('col2000');
                     this.updateColor('col2030');
@@ -788,7 +737,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col2300');
                     this.updateColor('col2330');
                     this.updateColor('col0000');
-                    this.updateColor('col0030');
                 }
             }
             if (
@@ -806,7 +754,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateShedding('col0100');
                     this.updateShedding('col0130');
                     this.updateShedding('col0200');
-                    this.updateShedding('col0230');
                 } else {
                     this.updateColor('col2200');
                     this.updateColor('col2230');
@@ -817,7 +764,6 @@ Module.register("MMM-EskomSePush", {
                     this.updateColor('col0100');
                     this.updateColor('col0130');
                     this.updateColor('col0200');
-                    this.updateColor('col0230');
                 }
             }
             if (
@@ -834,7 +780,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0300');
                 this.updateColor('col0330');
                 this.updateColor('col0400');
-                this.updateColor('col0430');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -850,7 +795,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0500');
                 this.updateColor('col0530');
                 this.updateColor('col0600');
-                this.updateColor('col0630');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -866,7 +810,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0700');
                 this.updateColor('col0730');
                 this.updateColor('col0800');
-                this.updateColor('col0830');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -882,7 +825,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col0900');
                 this.updateColor('col0930');
                 this.updateColor('col1000');
-                this.updateColor('col1030');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -898,7 +840,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col1100');
                 this.updateColor('col1130');
                 this.updateColor('col1200');
-                this.updateColor('col1230');
             }
             if (
                 event.relDate === "tomorrow" &&
@@ -914,7 +855,6 @@ Module.register("MMM-EskomSePush", {
                 this.updateColor('col1300');
                 this.updateColor('col1330');
                 this.updateColor('col1400');
-                this.updateColor('col1430');
             }
         })
     },

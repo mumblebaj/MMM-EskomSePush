@@ -47,6 +47,10 @@ Add the module to the modules array in the `config/config.js` file:
             }
 },
 ````
+## Updates
+### V1.2.2
+- Updates to remove invalid extra 30 minutes from display
+- With recent updates by City Power the current area code has been updated. Ensure latest area code is used if you live in the Johannesburg area.
 
 ## Registration for Token
 Go to [EskomSePush](https://eskomsepush.gumroad.com/l/api) and register for a free account. This allows you 50 calls per day. Obtain your token and determine your area as both these are required as input into the module.
