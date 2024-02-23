@@ -1,6 +1,6 @@
 {
   "name": "mmm-eskomsepush",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Eskom Loadshedding schedule data",
   "main": "MMM-EskomSePush.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "keywords": [
     "MagicMirror",
-    "EskomSePush"
+    "EskomSePush",
+    "Smarthome"
   ],
   "repository": {
     "type": "git",
