@@ -20,6 +20,13 @@
     font-size: 30px;
 }
 
+.esp-no-shedding {
+	margin: auto;
+    display: table;
+    font-size: 30px;
+	color: rgb(41, 246, 5);
+}
+
 .esp-columns,
 .esp-times {
     height: 50px;

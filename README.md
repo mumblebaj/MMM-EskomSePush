@@ -48,6 +48,10 @@ Add the module to the modules array in the `config/config.js` file:
 },
 ````
 ## Updates
+
+### V1.2.4
+- Updated module to show No upcoming loadshedding when there are no events for the scheduled stage.
+
 ### V1.2.2
 - Updates to remove invalid extra 30 minutes from display
 - With recent updates by City Power the current area code has been updated. Ensure latest area code is used if you live in the Johannesburg area.

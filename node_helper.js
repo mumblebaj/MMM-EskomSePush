@@ -22,11 +22,6 @@ module.exports = NodeHelper.create({
             const eventsLength = payload.events.length;
         const espEvents = [];
         if (payload.events.length > 1) {
-
-            //let start1 = DateTime.fromISO(payload.events[1].start);
-            //let end1 = DateTime.fromISO(payload.events[1].end);
-            //const diff = end1.diff(start1, ["years", "months", "days", "hours"])
-            //var timeDiff = diff.toObject()
                 let eventsData = []
                 payload.events.forEach(event => {
 					let start1 = DateTime.fromISO(event.start);
@@ -52,6 +47,13 @@ module.exports = NodeHelper.create({
             //     if (err)
             //         throw err;
             // })
+            this.sendSocketNotification("ESP_DATA", espEvents)
+        } else {
+            espEvents.push({ 
+                "areaInfo": payload.areaInfo,
+                "region": payload.region,
+                "events": "No upcoming loadshedding"
+            })
             this.sendSocketNotification("ESP_DATA", espEvents)
         }
     },
