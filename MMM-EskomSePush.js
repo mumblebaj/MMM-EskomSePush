@@ -151,7 +151,12 @@ Module.register("MMM-EskomSePush", {
             txtspan.innerHTML = "No upcoming loadshedding";
             txtspan.classList.remove('esp-text-span')
             txtspan.classList.add('esp-no-shedding')
-        } else {
+        } else if (espData[0].code === 404) {
+            const txtspan = document.querySelector(".esp-text-span")
+            txtspan.innerHTML = espData[0].events;
+            txtspan.classList.remove('esp-text-span')
+            txtspan.classList.add('esp-data-error')
+            } else {
             const txtspan = document.querySelector(".esp-text-span")
             txtspan.innerHTML = espData[0].areaInfo + " : " + espData[0].events[0].stage
         }
