@@ -43,10 +43,6 @@ module.exports = NodeHelper.create({
                 "region": payload.info.region,
                 "events": eventsData
             })
-            // fs.appendFile(datalog, JSON.stringify(espEvents, null, 2) + os.EOL, function (err) {
-            //     if (err)
-            //         throw err;
-            // })
             this.sendSocketNotification("ESP_DATA", espEvents)
         } else {
             espEvents.push({
@@ -61,8 +57,7 @@ module.exports = NodeHelper.create({
     async getEspData(payload) {
         var tkn = payload.token
         var endPoint = this.espUrl + payload.area
-        //+ "&test=current"
-        // jhbcitypower2-13-ormonde
+
         const response = await fetch(endPoint, {
             method: 'get',
             headers: {
@@ -70,28 +65,23 @@ module.exports = NodeHelper.create({
             }
         });
 
-        if (response.status === 404) {
+        if (response.status !== 202) {
             const errorText = await response.text();
             const espEvents = [];
             const errorObject = JSON.parse(errorText);
             const errorMessage = errorObject.error;
             espEvents.push({
-                "code": 404,
+                "code": response.status,
                 "areaInfo": payload.area,
                 "region": "",
                 "events": errorMessage
             })
-            console.log("MMM-EskomSePush Error Event", espEvents);
             this.sendSocketNotification("ESP_DATA", espEvents)
             return;
         }
 
         const data = await response.json();
         var results = this.deconstructData(data);
-        //fs.appendFile(datalog, JSON.stringify(data, null, 2) + os.EOL, function (err) {
-        //	if (err) throw err;
-        //})
-        //console.log(data)
     },
 
     socketNotificationReceived: function (notification, payload) {
