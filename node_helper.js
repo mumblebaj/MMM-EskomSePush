@@ -17,8 +17,9 @@ module.exports = NodeHelper.create({
         this.espUrl = "https://developer.sepush.co.za/business/2.0/area?id="
     },
 
-    deconstructData: function (data) {
-        var payload = data
+    deconstructData: function (data, code) {
+        var payload = data;
+        var code = code;
         const eventsLength = payload.events.length;
         const espEvents = [];
         if (payload.events.length > 1) {
@@ -39,6 +40,7 @@ module.exports = NodeHelper.create({
                 })
             });
             espEvents.push({
+                "code": code,
                 "areaInfo": payload.info.name,
                 "region": payload.info.region,
                 "events": eventsData
@@ -46,6 +48,7 @@ module.exports = NodeHelper.create({
             this.sendSocketNotification("ESP_DATA", espEvents)
         } else {
             espEvents.push({
+                "code": code,
                 "areaInfo": payload.areaInfo,
                 "region": payload.region,
                 "events": "No upcoming loadshedding"
@@ -65,7 +68,7 @@ module.exports = NodeHelper.create({
             }
         });
 
-        if (response.status !== 202) {
+        if (response.status !== 200) {
             const errorText = await response.text();
             const espEvents = [];
             const errorObject = JSON.parse(errorText);
@@ -81,7 +84,8 @@ module.exports = NodeHelper.create({
         }
 
         const data = await response.json();
-        var results = this.deconstructData(data);
+        const code = response.status;
+        var results = this.deconstructData(data, code);
     },
 
     socketNotificationReceived: function (notification, payload) {

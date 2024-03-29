@@ -146,12 +146,12 @@ Module.register("MMM-EskomSePush", {
         const currentTime = new Date();
         const hours = currentTime.getHours();
 
-        if (espData[0].events = "No upcoming loadshedding") {
+        if (espData[0].events === "No upcoming loadshedding") {
             const txtspan = document.querySelector(".esp-text-span")
             txtspan.innerHTML = "No upcoming loadshedding";
             txtspan.classList.remove('esp-text-span')
             txtspan.classList.add('esp-no-shedding')
-        } else if (espData[0].code === 404) {
+        } else if (espData[0].code !== 200) {
             const txtspan = document.querySelector(".esp-text-span")
             txtspan.innerHTML = espData[0].events;
             txtspan.classList.remove('esp-text-span')
