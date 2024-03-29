@@ -141,7 +141,6 @@ Module.register("MMM-EskomSePush", {
         this.resetColumnElements();
         this.resetTimeElements();
         let wrapper = document.getElementById("esp-wrapper")
-        Log.log("EskomSePush Data: ", espData)
 
         const currentTime = new Date();
         const hours = currentTime.getHours();
@@ -872,7 +871,7 @@ Module.register("MMM-EskomSePush", {
     },
 
     socketNotificationReceived: function (notification, payload) {
-        var self = this;
+        
         if (notification === "ESP_DATA") {
             this.espData = payload;
             this.updateESP(this.espData)
