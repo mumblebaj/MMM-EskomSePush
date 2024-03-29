@@ -1,12 +1,8 @@
 var NodeHelper = require('node_helper')
 var fetch = require('node-fetch')
-var fs = require('fs')
-var os = require('os')
 var {
     DateTime
 } = require('luxon')
-
-var datalog = `${__dirname}/data.log`;
 
 module.exports = NodeHelper.create({
     requiresVersion: '2.23.0',
@@ -19,8 +15,6 @@ module.exports = NodeHelper.create({
 
     deconstructData: function (data, code) {
         var payload = data;
-        var code = code;
-        const eventsLength = payload.events.length;
         const espEvents = [];
         if (payload.events.length > 1) {
             let eventsData = []
@@ -45,7 +39,7 @@ module.exports = NodeHelper.create({
                 "region": payload.info.region,
                 "events": eventsData
             })
-            this.sendSocketNotification("ESP_DATA", espEvents)
+            return espEvents;
         } else {
             espEvents.push({
                 "code": code,
@@ -53,7 +47,7 @@ module.exports = NodeHelper.create({
                 "region": payload.region,
                 "events": "No upcoming loadshedding"
             })
-            this.sendSocketNotification("ESP_DATA", espEvents)
+            return espEvents;
         }
     },
 
@@ -86,6 +80,7 @@ module.exports = NodeHelper.create({
         const data = await response.json();
         const code = response.status;
         var results = this.deconstructData(data, code);
+        this.sendSocketNotification("ESP_DATA", results)
     },
 
     socketNotificationReceived: function (notification, payload) {
