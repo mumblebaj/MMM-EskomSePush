@@ -1,6 +1,6 @@
 {
   "name": "mmm-eskomsepush",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Eskom Loadshedding schedule data",
   "main": "MMM-EskomSePush.js",
   "scripts": {
@@ -20,9 +20,5 @@
   "dependencies": {
     "luxon": "^3.4.2",
     "node-fetch": "^2.6.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1"
   }
 }

@@ -12,6 +12,14 @@ A [MagicMirror²](https://magicmirror.builders) module to display South African 
 
 ![Example](images/image-2.png)
 
+## No Loadshedding
+
+![Example](images/image-3.png)
+
+## Invalid Area
+
+![Example](images/image-4.png)
+
 ## Dependencies
 - Requires MagicMirror² v2.23.0
 - node-fetch v2.6.1
