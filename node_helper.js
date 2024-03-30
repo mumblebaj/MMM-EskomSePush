@@ -75,12 +75,12 @@ module.exports = NodeHelper.create({
             })
             this.sendSocketNotification("ESP_DATA", espEvents)
             return;
+        } else {
+            const data = await response.json();
+            const code = response.status;
+            var results = this.deconstructData(data, code);
+            this.sendSocketNotification("ESP_DATA", results)
         }
-
-        const data = await response.json();
-        const code = response.status;
-        var results = this.deconstructData(data, code);
-        this.sendSocketNotification("ESP_DATA", results)
     },
 
     socketNotificationReceived: function (notification, payload) {
