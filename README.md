@@ -68,6 +68,13 @@ Add the module to the modules array in the `config/config.js` file:
 ## Registration for Token
 Go to [EskomSePush](https://eskomsepush.gumroad.com/l/api) and register for a free account. This allows you 50 calls per day. Obtain your token and determine your area as both these are required as input into the module.
 
+To Obtain your area you can run the collowing command from the command line:
+
+````bash
+curl --request GET --url https://developer.sepush.co.za/business/2.0/areas_search?text=your-area-goes-here --header 'token: your-espsepush-token-here'
+````
+From the result set you can select the correct `id` for your area from the list.
+
 ## Updating
 
 To update the module to the latest version, use your terminal to go to your MMM-EskomSePush module folder and type the following command:
