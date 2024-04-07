@@ -73,7 +73,16 @@ To Obtain your area you can run the collowing command from the command line:
 ````bash
 curl --request GET --url https://developer.sepush.co.za/business/2.0/areas_search?text=your-area-goes-here --header 'token: your-espsepush-token-here'
 ````
+- Replace `your-area-goes-here` with partial of your area
+- Replace `your-espsepush-token-here` with your ESP Token
+
 From the result set you can select the correct `id` for your area from the list.
+
+````json
+
+{"areas":[{"id":"jhbcitypower3-5-goldenharvestah","name":"Golden Harvest A.H (5)","region":"JHB City Power"},{"id":"jhbcitypower3-11-harveston","name":"Harveston (11)","region":"JHB City Power"}]}
+
+````
 
 ## Updating
 
