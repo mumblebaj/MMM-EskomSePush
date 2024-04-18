@@ -58,6 +58,10 @@ Add the module to the modules array in the `config/config.js` file:
 ````
 ## Updates
 
+### v1.2.7
+- Updates to css to align better.
+- add MagicMirror Platform license
+
 ### V1.2.4
 - Updated module to show No upcoming loadshedding when there are no events for the scheduled stage.
 
