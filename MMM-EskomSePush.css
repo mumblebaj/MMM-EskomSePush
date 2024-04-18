@@ -1,11 +1,14 @@
 .esp-container {
     width: 100%;
     height: 20vh;
-    transform: translate(5%, 50%);
-    -webkit-transform: translate(5%, 50%);
-    -moz-transform: translate(5%, 50%);
-    -ms-transform: translate(5%, 50%);
-    -o-transform: translate(5%, 50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .esp-text-div {
@@ -14,23 +17,17 @@
 }
 
 .esp-container .esp-text-div .esp-text-span {
-    margin: auto;
-    display: table;
     color: white;
     font-size: 30px;
 }
 
 .esp-no-shedding {
-	margin: auto;
-    display: table;
-    font-size: 30px;
+	font-size: 30px;
 	color: rgb(41, 246, 5);
 }
 
 .esp-data-error {
-	margin: auto;
-    display: table;
-    font-size: 30px;
+	font-size: 30px;
 	color: red;
 }
 
