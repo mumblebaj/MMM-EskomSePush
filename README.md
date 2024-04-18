@@ -58,6 +58,10 @@ Add the module to the modules array in the `config/config.js` file:
 ````
 ## Updates
 
+### v1.2.8
+- On request have added a config to hide all elements when there is no Loadshedding scheduled.
+- New option `hideElements` have been added and can accept a value of `both`.  This will auto hide the module content when there is no loadshedding. This config can be removed to show the current `No Loadshedding`.
+
 ### v1.2.7
 - Updates to css to align better.
 - add MagicMirror Platform license

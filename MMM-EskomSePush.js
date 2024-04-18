@@ -2,6 +2,7 @@ Module.register("MMM-EskomSePush", {
     defaults: {
         token: "token",
         area: "yourarea",
+        hideElements: "both",
         updateInterval: 30 * 60 * 1000,
         fetchInterval: 2 * 60 * 60 * 1000
 
@@ -146,16 +147,23 @@ Module.register("MMM-EskomSePush", {
         const hours = currentTime.getHours();
 
         if (espData[0].events === "No upcoming loadshedding") {
-            const txtspan = document.querySelector(".esp-text-span")
-            txtspan.innerHTML = "No upcoming loadshedding";
-            txtspan.classList.remove('esp-text-span')
-            txtspan.classList.add('esp-no-shedding')
+            if (this.config.hideElements === "both") {
+                var container = document.querySelector(".esp-container")
+                if (container) {
+                    container.parentNode.removeChild(container);
+                }
+            } else {
+                const txtspan = document.querySelector(".esp-text-span")
+                txtspan.innerHTML = "No upcoming loadshedding";
+                txtspan.classList.remove('esp-text-span')
+                txtspan.classList.add('esp-no-shedding')
+            }
         } else if (espData[0].code !== 200) {
             const txtspan = document.querySelector(".esp-text-span")
             txtspan.innerHTML = espData[0].events;
             txtspan.classList.remove('esp-text-span')
             txtspan.classList.add('esp-data-error')
-            } else {
+        } else {
             const txtspan = document.querySelector(".esp-text-span")
             txtspan.innerHTML = espData[0].areaInfo + " : " + espData[0].events[0].stage
         }
@@ -871,7 +879,7 @@ Module.register("MMM-EskomSePush", {
     },
 
     socketNotificationReceived: function (notification, payload) {
-        
+
         if (notification === "ESP_DATA") {
             this.espData = payload;
             this.updateESP(this.espData)
