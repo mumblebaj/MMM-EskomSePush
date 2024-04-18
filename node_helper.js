@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
     deconstructData: function (data, code) {
         var payload = data;
         const espEvents = [];
-        if (payload.events.length > 1) {
+        if (payload.events.length >= 1) {
             let eventsData = []
             payload.events.forEach(event => {
                 let start1 = DateTime.fromISO(event.start);
