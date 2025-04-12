@@ -4,6 +4,8 @@ A [MagicMirror²](https://magicmirror.builders) module to display South African 
 
 [![Platform](https://img.shields.io/badge/platform-MagicMirror-informational)](https://MagicMirror.builders)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://prettier.io/)
+[![ESLint Enabled](https://img.shields.io/badge/ESLint-Enabled-blue.svg)](https://eslint.org/)
 
 ## 2.5hr Stint
 
