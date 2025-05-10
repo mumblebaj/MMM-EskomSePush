@@ -7,6 +7,8 @@ A [MagicMirror²](https://magicmirror.builders) module to display South African 
 [![ESLint Enabled](https://img.shields.io/badge/ESLint-Enabled-blue.svg)](https://eslint.org/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://prettier.io/)
 
+<a href="https://www.buymeacoffee.com/mumblebaj" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 180px !important;" ></a>
+
 ## 2.5hr Stint
 
 ![Example](images/image-1.png)
