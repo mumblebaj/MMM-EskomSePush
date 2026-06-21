@@ -8,7 +8,7 @@ module.exports = NodeHelper.create({
   start: function () {
     console.log("Starting node_helper for module: " + this.name);
 
-    this.espUrl = "https://developer.sepush.co.za/business/2.0/area?id=";
+    this.espUrl = "https://developer.sepush.co.za/business/3.0/area?id=";
   },
 
   deconstructData: function (data, code) {
