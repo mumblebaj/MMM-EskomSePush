@@ -68,6 +68,12 @@ Add the module to the modules array in the `config/config.js` file:
 
 ## Updates
 
+### v1.4.0
+
+- Update base URL
+- Update API version to v3
+- Use the first part of your current area i.e. if your area id was `jhbcitypower3-5-goldenharvestah` now you would only need to use `jhbcitypower3-5`.
+
 ### v1.2.8
 
 - On request have added a config to hide all elements when there is no Loadshedding scheduled.
