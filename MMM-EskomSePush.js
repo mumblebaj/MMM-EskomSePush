@@ -162,10 +162,17 @@ Module.register("MMM-EskomSePush", {
     });
   },
 
+  setScheduleVisibility: function (hidden) {
+    const elements = document.querySelectorAll(".esp-text-div, .esp-columns, .esp-times");
+    elements.forEach((element) => {
+      element.classList.toggle("esp-schedule-hidden", hidden);
+    });
+  },
+
   updateESP: function (espData) {
     this.resetColumnElements();
     this.resetTimeElements();
-    let wrapper = document.getElementById("esp-wrapper");
+    this.setScheduleVisibility(false);
 
     const currentTime = new Date();
     const hours = currentTime.getHours();
@@ -180,6 +187,8 @@ Module.register("MMM-EskomSePush", {
         if (container) {
           container.parentNode.removeChild(container);
         }
+      } else if (reportsEnabled) {
+        this.setScheduleVisibility(true);
       } else {
         const txtspan = document.querySelector(".esp-text-span");
         txtspan.textContent = "No upcoming loadshedding";
@@ -830,6 +839,21 @@ Module.register("MMM-EskomSePush", {
         count.className = "esp-report-count";
         count.textContent = `${report.metrics.current_reports} current reports`;
         row.appendChild(count);
+      }
+
+      if (!report.error && report.metrics?.current_reports > 0) {
+        const latest = report.reports?.[0];
+        const latestCounts = latest?.[report.category];
+        if (latestCounts) {
+          const latestReport = document.createElement("span");
+          latestReport.className = "esp-report-latest";
+          const reportedAt = new Date(latest.start).toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+          });
+          latestReport.textContent = `Latest ${reportedAt}: ${latestCounts.off} down, ${latestCounts.on} up`;
+          row.appendChild(latestReport);
+        }
       }
 
       container.appendChild(row);

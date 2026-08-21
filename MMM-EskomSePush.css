@@ -47,6 +47,15 @@
   text-transform: none;
 }
 
+.esp-report-latest {
+  color: silver;
+  text-transform: none;
+}
+
+.esp-schedule-hidden {
+  display: none;
+}
+
 .esp-report-healthy {
   color: rgb(41, 246, 5);
 }
