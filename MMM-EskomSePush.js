@@ -171,14 +171,18 @@ Module.register("MMM-EskomSePush", {
     const hours = currentTime.getHours();
 
     if (espData[0].events === "No upcoming loadshedding") {
-      if (this.config.hideElements === "both") {
+      const reportsEnabled =
+        this.config.reportArea &&
+        Array.isArray(this.config.reportCategories) &&
+        this.config.reportCategories.length > 0;
+      if (this.config.hideElements === "both" && !reportsEnabled) {
         var container = document.querySelector(".esp-container");
         if (container) {
           container.parentNode.removeChild(container);
         }
       } else {
         const txtspan = document.querySelector(".esp-text-span");
-        txtspan.innerHTML = "No upcoming loadshedding";
+        txtspan.textContent = "No upcoming loadshedding";
         txtspan.classList.remove("esp-text-span");
         txtspan.classList.add("esp-no-shedding");
       }
