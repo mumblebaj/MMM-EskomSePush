@@ -61,7 +61,7 @@ Add the module to the modules array in the `config/config.js` file:
               token: "your token",
               area: "yourarea",
               updateInterval: 30*60*1000,
-              fetchInterval: 30*60*1000,
+              fetchInterval: 2*60*60*1000,
               reportArea: "za_gt_jhb_fourways_4pef",
               reportCategories: ["water", "internet"],
               reportInterval: 6*60*60*1000
@@ -73,6 +73,12 @@ Add the module to the modules array in the `config/config.js` file:
 
 Water, internet, and electricity community outage reports are opt-in. `area` remains the schedule ID used by the existing API endpoint, while `reportArea` must be a v3.1 area ID that uses underscores (for example, `za_gt_jhb_fourways_4pef`). Configure only the report categories you need: `electricity`, `water`, and/or `internet`.
 
+| Option             | Default        | Description                                                                         |
+| ------------------ | -------------- | ----------------------------------------------------------------------------------- |
+| `reportArea`       | `null`         | v3.1 area ID used for community reports. Reports are disabled when this is not set. |
+| `reportCategories` | `[]`           | One or more of `electricity`, `water`, and `internet`.                              |
+| `reportInterval`   | `6*60*60*1000` | How often the module requests each configured report category.                      |
+
 Each report category costs 2 API credits per refresh. The default six-hour `reportInterval` means water and internet reports use 16 credits/day; all three categories use 24 credits/day. Keep all three categories at four hours or longer on a typical 50-credit/day plan, including the module's schedule requests.
 
 Find a v3.1 area ID with:
@@ -81,7 +87,9 @@ Find a v3.1 area ID with:
 curl --request GET --url "https://developer.sepush.co.za/business/3.1/areas_search?text=your-area-goes-here" --header "token: your-espsepush-token-here"
 ```
 
-The report API is in beta and its response fields may change. The module shows each configured service's health state and number of current outage reports; community chat highlights are not displayed.
+The report API is in beta and its response fields may change. The module shows each configured service's health state and number of current outage reports. When there are active reports, it also displays the newest half-hour report counts and the most recently active community chat message.
+
+When `hideElements` is set to `both` and there is no upcoming loadshedding, the module hides the loadshedding schedule but continues to display configured outage reports. Without report configuration, the module keeps its existing behavior and hides completely.
 
 ## Updates
 
