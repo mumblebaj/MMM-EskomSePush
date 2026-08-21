@@ -857,6 +857,14 @@ Module.register("MMM-EskomSePush", {
       }
 
       container.appendChild(row);
+
+      const latestChat = report.chats?.[0];
+      if (!report.error && latestChat?.body) {
+        const chat = document.createElement("div");
+        chat.className = "esp-report-chat";
+        chat.textContent = latestChat.body;
+        container.appendChild(chat);
+      }
     });
   },
 

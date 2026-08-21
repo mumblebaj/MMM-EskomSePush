@@ -52,6 +52,14 @@
   text-transform: none;
 }
 
+.esp-report-chat {
+  margin: 2px 0 10px;
+  color: silver;
+  font-size: 14px;
+  font-style: italic;
+  text-transform: none;
+}
+
 .esp-schedule-hidden {
   display: none;
 }
