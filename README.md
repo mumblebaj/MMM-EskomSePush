@@ -62,7 +62,7 @@ Add the module to the modules array in the `config/config.js` file:
               area: "yourarea",
               updateInterval: 30*60*1000,
               fetchInterval: 2*60*60*1000,
-              reportArea: "za_gt_jhb_fourways_4pef",
+              reportArea: "your-report-area",
               reportCategories: ["water", "internet"],
               reportInterval: 6*60*60*1000
             }
