@@ -9,6 +9,7 @@ module.exports = NodeHelper.create({
     console.log("Starting node_helper for module: " + this.name);
 
     this.espUrl = "https://developer.sepush.co.za/business/3.0/schedule?id=";
+    this.espReportsUrl = "https://developer.sepush.co.za/business/3.1/reports";
   },
 
   deconstructData: function (data, code) {
@@ -82,9 +83,84 @@ module.exports = NodeHelper.create({
     }
   },
 
+  async getEspReports(payload) {
+    const reportArea = payload.reportArea;
+    const validCategories = ["electricity", "water", "internet"];
+    const configuredCategories = Array.isArray(payload.reportCategories)
+      ? payload.reportCategories
+      : [];
+    const categories = [...new Set(configuredCategories)].filter((category) =>
+      validCategories.includes(category)
+    );
+
+    if (!reportArea || categories.length === 0 || this.reportQuotaReset > Date.now()) {
+      return;
+    }
+
+    const requests = categories.map(async (category) => {
+      const query = `?id=${encodeURIComponent(reportArea)}&category=${encodeURIComponent(category)}`;
+      const response = await fetch(this.espReportsUrl + query, {
+        method: "get",
+        headers: {
+          token: payload.token
+        }
+      });
+
+      const quota = {
+        remaining: response.headers.get("x-ratelimit-remaining"),
+        reset: response.headers.get("x-ratelimit-reset")
+      };
+
+      if (response.status !== 200) {
+        const errorBody = await response.json().catch(() => ({}));
+        if (response.status === 429 && quota.reset) {
+          const resetAt = Date.parse(quota.reset);
+          if (!Number.isNaN(resetAt)) {
+            this.reportQuotaReset = resetAt;
+          }
+        }
+        return {
+          category: category,
+          code: response.status,
+          error: errorBody.error || "Unable to retrieve outage reports",
+          quota: quota
+        };
+      }
+
+      const data = await response.json();
+      return {
+        category: category,
+        code: response.status,
+        health: data.health || { state: "UNKNOWN" },
+        metrics: data.metrics || {},
+        reports: data.reports || [],
+        chats: data.chats || [],
+        quota: quota
+      };
+    });
+
+    const results = await Promise.allSettled(requests);
+    const reports = results.map((result, index) => {
+      if (result.status === "fulfilled") {
+        return result.value;
+      }
+
+      return {
+        category: categories[index],
+        code: 0,
+        error: "Unable to retrieve outage reports"
+      };
+    });
+
+    this.sendSocketNotification("ESP_REPORTS", reports);
+  },
+
   socketNotificationReceived: function (notification, payload) {
     if (notification === "GET_ESP_DATA") {
       this.getEspData(payload);
+    }
+    if (notification === "GET_ESP_REPORTS") {
+      this.getEspReports(payload);
     }
   }
 });

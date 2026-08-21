@@ -61,10 +61,27 @@ Add the module to the modules array in the `config/config.js` file:
               token: "your token",
               area: "yourarea",
               updateInterval: 30*60*1000,
-              fetchInterval: 30*60*1000
+              fetchInterval: 30*60*1000,
+              reportArea: "za_gt_jhb_fourways_4pef",
+              reportCategories: ["water", "internet"],
+              reportInterval: 6*60*60*1000
             }
 },
 ```
+
+## Water and Internet Outages (API v3.1 beta)
+
+Water, internet, and electricity community outage reports are opt-in. `area` remains the schedule ID used by the existing API endpoint, while `reportArea` must be a v3.1 area ID that uses underscores (for example, `za_gt_jhb_fourways_4pef`). Configure only the report categories you need: `electricity`, `water`, and/or `internet`.
+
+Each report category costs 2 API credits per refresh. The default six-hour `reportInterval` means water and internet reports use 16 credits/day; all three categories use 24 credits/day. Keep all three categories at four hours or longer on a typical 50-credit/day plan, including the module's schedule requests.
+
+Find a v3.1 area ID with:
+
+```bash
+curl --request GET --url "https://developer.sepush.co.za/business/3.1/areas_search?text=your-area-goes-here" --header "token: your-espsepush-token-here"
+```
+
+The report API is in beta and its response fields may change. The module shows each configured service's health state and number of current outage reports; community chat highlights are not displayed.
 
 ## Updates
 

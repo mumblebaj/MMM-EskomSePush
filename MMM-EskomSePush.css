@@ -21,6 +21,48 @@
   font-size: 30px;
 }
 
+.esp-report-status {
+  margin-bottom: 12px;
+}
+
+.esp-report-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.esp-report-category {
+  min-width: 80px;
+}
+
+.esp-report-state {
+  min-width: 90px;
+}
+
+.esp-report-count {
+  color: silver;
+  text-transform: none;
+}
+
+.esp-report-healthy {
+  color: rgb(41, 246, 5);
+}
+
+.esp-report-degraded {
+  color: #ffaa33;
+}
+
+.esp-report-critical {
+  color: red;
+}
+
+.esp-report-unknown {
+  color: silver;
+}
+
 .esp-no-shedding {
   font-size: 30px;
   color: rgb(41, 246, 5);

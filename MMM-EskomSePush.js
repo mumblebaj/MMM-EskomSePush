@@ -4,7 +4,10 @@ Module.register("MMM-EskomSePush", {
     area: "yourarea",
     hideElements: "both",
     updateInterval: 30 * 60 * 1000,
-    fetchInterval: 2 * 60 * 60 * 1000
+    fetchInterval: 2 * 60 * 60 * 1000,
+    reportArea: null,
+    reportCategories: [],
+    reportInterval: 6 * 60 * 60 * 1000
   },
 
   getStyles: function () {
@@ -13,8 +16,10 @@ Module.register("MMM-EskomSePush", {
 
   start: function () {
     this.getESPData();
+    this.getESPReports();
 
     this.scheduleUpdate();
+    this.scheduleReportsUpdate();
   },
 
   stop: function () {
@@ -23,6 +28,12 @@ Module.register("MMM-EskomSePush", {
 
   getESPData: function () {
     this.sendSocketNotification("GET_ESP_DATA", this.config);
+  },
+
+  getESPReports: function () {
+    if (this.config.reportArea && this.config.reportCategories.length > 0) {
+      this.sendSocketNotification("GET_ESP_REPORTS", this.config);
+    }
   },
 
   getDom: function () {
@@ -42,6 +53,10 @@ Module.register("MMM-EskomSePush", {
 
     esp_text_div.appendChild(esp_text_span);
     wrapper.appendChild(esp_text_div);
+
+    const reportStatus = createDivWithClass("esp-report-status");
+    reportStatus.id = "esp-report-status";
+    wrapper.appendChild(reportStatus);
 
     const esp_columns = createDivWithClass("esp-columns");
 
@@ -90,6 +105,18 @@ Module.register("MMM-EskomSePush", {
     var self = this;
     setInterval(function () {
       self.getESPData();
+    }, nextLoad);
+  },
+
+  scheduleReportsUpdate: function (delay) {
+    var nextLoad = this.config.reportInterval;
+    if (typeof delay != "undefined" && delay >= 0) {
+      nextLoad = delay;
+    }
+
+    var self = this;
+    setInterval(function () {
+      self.getESPReports();
     }, nextLoad);
   },
 
@@ -768,10 +795,50 @@ Module.register("MMM-EskomSePush", {
     });
   },
 
+  updateReports: function (reports) {
+    const container = document.getElementById("esp-report-status");
+    if (!container) {
+      return;
+    }
+
+    container.replaceChildren();
+    reports.forEach((report) => {
+      const row = document.createElement("div");
+      row.className = "esp-report-row";
+
+      const category = document.createElement("span");
+      category.className = "esp-report-category";
+      category.textContent = report.category;
+      row.appendChild(category);
+
+      const status = document.createElement("span");
+      const state = report.health?.state || "UNKNOWN";
+      status.className = `esp-report-state esp-report-${state.toLowerCase()}`;
+      status.textContent = report.error || state;
+      row.appendChild(status);
+
+      if (
+        !report.error &&
+        report.metrics?.current_reports !== null &&
+        report.metrics?.current_reports !== undefined
+      ) {
+        const count = document.createElement("span");
+        count.className = "esp-report-count";
+        count.textContent = `${report.metrics.current_reports} current reports`;
+        row.appendChild(count);
+      }
+
+      container.appendChild(row);
+    });
+  },
+
   socketNotificationReceived: function (notification, payload) {
     if (notification === "ESP_DATA") {
       this.espData = payload;
       this.updateESP(this.espData);
+    }
+    if (notification === "ESP_REPORTS") {
+      this.updateReports(payload);
     }
   }
 });
