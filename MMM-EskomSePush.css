@@ -53,10 +53,12 @@
 }
 
 .esp-report-chat {
+  width: 100%;
   margin: 2px 0 10px;
   color: silver;
   font-size: 14px;
   font-style: italic;
+  text-align: left;
   text-transform: none;
 }
 
